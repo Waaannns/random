@@ -11,15 +11,11 @@ pilihan_sh = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
-        [InlineKeyboardButton("($1)", callback_data="sh6")],
-        [InlineKeyboardButton("($1)", callback_data="sh7")],
+        [InlineKeyboardButton("($1)", callback_data="sh6"), InlineKeyboardButton("($1)", callback_data="sh7")],
         [InlineKeyboardButton("($1)", callback_data="sh4")],
-        [InlineKeyboardButton("($5)", callback_data="sh1")],
-        [InlineKeyboardButton("($5)", callback_data="sh2")],
-        [InlineKeyboardButton("($10)", callback_data="sh3")],
-        [InlineKeyboardButton("($10)", callback_data="sh5")],
-        [InlineKeyboardButton("($10)", callback_data="sh8")],
-        [InlineKeyboardButton("($10)", callback_data="sh9")],
+        [InlineKeyboardButton("($5)", callback_data="sh1"), InlineKeyboardButton("($5)", callback_data="sh2")],
+        [InlineKeyboardButton("($10)", callback_data="sh3"), InlineKeyboardButton("($10)", callback_data="sh5")],
+        [InlineKeyboardButton("($10)", callback_data="sh8"), InlineKeyboardButton("($10)", callback_data="sh9")],
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("Choice url shopify:", reply_markup=reply_markup)
